@@ -31,6 +31,9 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // Static files
 app.use(express.static(path.join(__dirname, '../public')));
 
+// Routes
+app.use('/api', require('./routes/weather'));
+
 // Health check endpoint
 app.get('/health', (req, res) => {
     res.json({
