@@ -126,59 +126,59 @@ class WeatherController {
         if (uv.uv_index !== null) {
             if (uv.uv_index >= 8) {
                 recommendations.push(
-                    "[!] Index UV très élevé : Évitez l'exposition au soleil entre 10h et 16h"
+                    "Index UV très élevé : Évitez l'exposition au soleil entre 10h et 16h"
                 );
             } else if (uv.uv_index >= 6) {
-                recommendations.push('[!] Index UV élevé : Appliquez de la crème solaire SPF 30+');
+                recommendations.push('Index UV élevé : Appliquez de la crème solaire SPF 30+');
             } else if (uv.uv_index >= 3) {
-                recommendations.push('[i] Index UV modéré : Protection solaire recommandée');
+                recommendations.push('Index UV modéré : Protection solaire recommandée');
             }
         }
 
         // Precipitation recommendations
         if (weather.precipitation > 5) {
             recommendations.push(
-                '[!] Fortes pluies prévues : Prenez un parapluie et conduisez prudemment'
+                'Fortes pluies prévues : Prenez un parapluie et conduisez prudemment'
             );
         } else if (weather.precipitation > 0) {
-            recommendations.push('[i] Pluie prévue : Prenez un parapluie');
+            recommendations.push('Pluie prévue : Prenez un parapluie');
         }
 
         // Temperature recommendations
         if (weather.temperature < 0) {
-            recommendations.push('[!] Gel : Habillez-vous très chaudement et attention au verglas');
+            recommendations.push('Gel : Habillez-vous très chaudement et attention au verglas');
         } else if (weather.temperature < 5) {
-            recommendations.push('[i] Température très froide : Habillez-vous chaudement');
+            recommendations.push('Température très froide : Habillez-vous chaudement');
         } else if (weather.temperature < 15) {
-            recommendations.push('[i] Température fraîche : Prévoyez une veste');
+            recommendations.push('Température fraîche : Prévoyez une veste');
         } else if (weather.temperature > 30) {
             recommendations.push(
-                "[!] Forte chaleur : Restez hydraté et évitez l'effort physique intense"
+                "Forte chaleur : Restez hydraté et évitez l'effort physique intense"
             );
         }
 
         // Wind recommendations
         if (weather.wind_speed > 50) {
-            recommendations.push("[!] Vent très violent : Restez à l'intérieur si possible");
+            recommendations.push("Vent très violent : Restez à l'intérieur si possible");
         } else if (weather.wind_speed > 30) {
-            recommendations.push("[!] Vent très fort : Soyez prudent à l'extérieur");
+            recommendations.push("Vent très fort : Soyez prudent à l'extérieur");
         } else if (weather.wind_speed > 20) {
-            recommendations.push('[i] Conditions venteuses : Attention aux objets légers');
+            recommendations.push('Conditions venteuses : Attention aux objets légers');
         }
 
         // Air quality recommendations
         if (airQuality.aqi !== null) {
             if (airQuality.aqi > 200) {
                 recommendations.push(
-                    "[!] Qualité de l'air dangereuse : Restez à l'intérieur, portez un masque FFP2"
+                    "Qualité de l'air dangereuse : Restez à l'intérieur, portez un masque FFP2"
                 );
             } else if (airQuality.aqi > 150) {
                 recommendations.push(
-                    "[!] Qualité de l'air médiocre : Portez un masque et limitez les activités extérieures"
+                    "Qualité de l'air médiocre : Portez un masque et limitez les activités extérieures"
                 );
             } else if (airQuality.aqi > 100) {
                 recommendations.push(
-                    "[i] Qualité de l'air modérée : Les personnes sensibles devraient limiter leur exposition"
+                    "Qualité de l'air modérée : Les personnes sensibles devraient limiter leur exposition"
                 );
             }
         }
