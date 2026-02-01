@@ -8,7 +8,7 @@ Visualisation 3D du globe terrestre, données météo en temps réel, indice UV,
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-green)
 ![Tests](https://github.com/Johan-Agouni/atmosphere-api/actions/workflows/ci.yml/badge.svg)
 
-### 🌐 [Demo Live](https://atmosphere-dashboard.vercel.app) · 🔗 [API](https://atmosphere-api-production.up.railway.app/health)
+### 🌐 [Demo Live](https://atmosphere-dashboard.vercel.app) · 🔗 [API](https://atmosphere-api-production.up.railway.app/health) · 🛡️ [Security Dashboard](https://atmosphere-api-production.up.railway.app/admin/)
 
 ---
 
@@ -32,6 +32,7 @@ Visualisation 3D du globe terrestre, données météo en temps réel, indice UV,
 |---------|-----|-------------|
 | Frontend | [atmosphere-dashboard.vercel.app](https://atmosphere-dashboard.vercel.app) | Vercel |
 | API Backend | [atmosphere-api-production.up.railway.app](https://atmosphere-api-production.up.railway.app/health) | Railway |
+| Security Dashboard | [atmosphere-api-production.up.railway.app/admin/](https://atmosphere-api-production.up.railway.app/admin/) | Railway |
 
 ---
 
